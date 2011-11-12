@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:Version xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning">
+  <projectState href="projectstate-0.ups#/"/>
+  <primarySpec/>
+  <nextVersion href="version-1.upv#/"/>
+  <logMessage author="super" message="Creating project 'test'" date="2009-06-23T15:04:10.732+0200" clientDate="2009-06-23T15:04:10.719+0200"/>
+</org.unicase.emfstore.esmodel.versioning:Version>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:ChangePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning" xmlns:org.unicase.emfstore.esmodel.versioning.events="http://unicase.org/esmodel/versioning/events" xmlns:org.unicase.emfstore.esmodel.versioning.operations="http://unicase.org/esmodel/versioning/operations">
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:AttributeOperation" identifier="_A6Q-sF_3Ed6XHN4qMyibmA" clientDate="2009-06-23T15:08:59.035+0200" featureName="description" newValue="ACED00057400233B2C0A25424547494E4E5445585425666F722074657374696E67206974657261746F72">
+    <modelElementId id="_YcmdEF_2Ed6XHN4qMyibmA"/>
+  </operations>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-06-23T15:08:16.328+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-06-23T15:08:16.440+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-06-23T15:08:16.440+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-06-23T15:08:16.746+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-06-23T15:08:16.746+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-06-23T15:08:32.701+0200" sourceView="org.unicase.ui.navigator.TreeView" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_YcmdEF_2Ed6XHN4qMyibmA"/>
+  </events>
+</org.unicase.emfstore.esmodel.versioning:ChangePackage>

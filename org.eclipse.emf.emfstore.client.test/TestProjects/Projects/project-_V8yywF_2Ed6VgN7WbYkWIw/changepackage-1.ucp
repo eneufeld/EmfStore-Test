@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:ChangePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning" xmlns:org.unicase.emfstore.esmodel.versioning.events="http://unicase.org/esmodel/versioning/events" xmlns:org.unicase.emfstore.esmodel.versioning.operations="http://unicase.org/esmodel/versioning/operations" xmlns:org.unicase.model.document="http://unicase.org/model/document">
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:CreateDeleteOperation" identifier="_YguvIF_2Ed6XHN4qMyibmA" clientDate="2009-06-23T15:04:27.922+0200">
+    <modelElementId id="_YcmdEF_2Ed6XHN4qMyibmA"/>
+    <modelElement xsi:type="org.unicase.model.document:CompositeSection" identifier="_YcmdEF_2Ed6XHN4qMyibmA" name="Document 1" creator="super" creationDate="2009-06-23T15:04:27.804+0200"/>
+  </operations>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-06-23T15:04:21.217+0200">
+    <notifications identifier="_XgxG8F_2Ed6XHN4qMyibmA" name="Updated Project" message="You updated your project to version 0" creationDate="2009-06-23T15:04:21.215+0200" sender="Update Notification Provider" recipient="super">
+      <project id="_V8yywF_2Ed6VgN7WbYkWIw"/>
+    </notifications>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:CheckoutEvent" timestamp="2009-06-23T15:04:21.236+0200">
+    <baseVersion/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-06-23T15:04:21.329+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-06-23T15:04:21.329+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-06-23T15:04:22.586+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-06-23T15:04:22.586+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-06-23T15:04:38.180+0200" sourceView="org.unicase.ui.navigator.TreeView" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_YcmdEF_2Ed6XHN4qMyibmA"/>
+  </events>
+</org.unicase.emfstore.esmodel.versioning:ChangePackage>

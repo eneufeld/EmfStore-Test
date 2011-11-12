@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.model="http://unicase.org/model" xmlns:org.unicase.model.attachment="http://unicase.org/model/attachment" xmlns:org.unicase.model.bug="http://unicase.org/model/bug" xmlns:org.unicase.model.document="http://unicase.org/model/document" xmlns:org.unicase.model.requirement="http://unicase.org/model/requirement" xmlns:org.unicase.model.task="http://unicase.org/model/task">
+  <modelElements xsi:type="org.unicase.model.document:CompositeSection" identifier="_xsBX4LyFEd6icoYWX7z4mg" name="new Document" creator="super" creationDate="2009-10-19T10:06:01.871+0200">
+    <subsections xsi:type="org.unicase.model.document:LeafSection" identifier="_QKUtYLyGEd6icoYWX7z4mg" name="new leaf section" creator="super" creationDate="2009-10-19T10:06:06.424+0200">
+      <modelElements xsi:type="org.unicase.model.attachment:FileAttachment" identifier="_TZ614LyGEd6icoYWX7z4mg" name="new FileAttachment" creator="super" creationDate="2009-10-19T10:06:28.206+0200" referringModelElements="_BYWFsML7Ed6azJjlbSmpig" fileName="123.jpg" fileID="6" fileSize="74094"/>
+      <modelElements xsi:type="org.unicase.model.bug:BugReport" identifier="_UlnM8LyGEd6icoYWX7z4mg" name="new BugReport" creator="super" creationDate="2009-10-19T10:06:36.103+0200" predecessors="_YO8rILyGEd6icoYWX7z4mg" successors="_lKGoELyIEd6icoYWX7z4mg"/>
+      <modelElements xsi:type="org.unicase.model.requirement:FunctionalRequirement" identifier="_Y9QGILyHEd6icoYWX7z4mg" name="new FunctionalRequirement" creator="super" creationDate="2009-10-19T10:17:54.707+0200"/>
+      <modelElements xsi:type="org.unicase.model.bug:BugReport" identifier="_a2itkLyIEd6icoYWX7z4mg" name="new BugReport" creator="super" creationDate="2009-10-19T10:21:42.924+0200"/>
+      <modelElements xsi:type="org.unicase.model.task:ActionItem" identifier="_eYlQ8LyIEd6icoYWX7z4mg" name="New Action Item" description="" creator="super" creationDate="2009-10-19T10:22:30.089+0200" annotatedModelElements="_RPdJcLyGEd6icoYWX7z4mg"/>
+      <modelElements xsi:type="org.unicase.model.attachment:FileAttachment" identifier="__lV3AML6Ed6azJjlbSmpig" name="new FileAttachment" creator="super" creationDate="2009-10-27T14:16:53.248+0100"/>
+    </subsections>
+    <subsections xsi:type="org.unicase.model.document:LeafSection" identifier="_AEbmwML7Ed6azJjlbSmpig" name="new leaf section" creator="super" creationDate="2009-10-27T14:16:56.508+0100">
+      <modelElements xsi:type="org.unicase.model.attachment:FileAttachment" identifier="_BYWFsML7Ed6azJjlbSmpig" name="new FileAttachment" creator="super" creationDate="2009-10-27T14:17:05.306+0100" attachments="_TZ614LyGEd6icoYWX7z4mg" referringModelElements="_1nZEcLyJEd6icoYWX7z4mg"/>
+      <modelElements xsi:type="org.unicase.model.attachment:FileAttachment" identifier="_BriHcML7Ed6azJjlbSmpig" name="new FileAttachment" creator="super" creationDate="2009-10-27T14:17:07.319+0100"/>
+      <modelElements xsi:type="org.unicase.model.attachment:FileAttachment" identifier="_CDMZgML7Ed6azJjlbSmpig" name="new FileAttachment" creator="super" creationDate="2009-10-27T14:17:09.799+0100"/>
+    </subsections>
+  </modelElements>
+  <modelElements xsi:type="org.unicase.model.document:CompositeSection" identifier="_RPdJcLyGEd6icoYWX7z4mg" name="new Document" creator="super" creationDate="2009-10-19T10:06:13.646+0200" annotations="_eYlQ8LyIEd6icoYWX7z4mg">
+    <subsections xsi:type="org.unicase.model.document:LeafSection" identifier="_RyUl8LyGEd6icoYWX7z4mg" name="new leaf section" creator="super" creationDate="2009-10-19T10:06:17.301+0200">
+      <modelElements xsi:type="org.unicase.model.task:ActionItem" identifier="_WKoqALyGEd6icoYWX7z4mg" name="new ActionItem" creator="super" creationDate="2009-10-19T10:06:46.696+0200"/>
+      <modelElements xsi:type="org.unicase.model.task:Milestone" identifier="_YO8rILyGEd6icoYWX7z4mg" name="new Milestone" creator="super" creationDate="2009-10-19T10:07:00.570+0200" successors="_UlnM8LyGEd6icoYWX7z4mg"/>
+      <modelElements xsi:type="org.unicase.model.task:Milestone" identifier="_km6bcLyIEd6icoYWX7z4mg" name="new Milestone" creator="super" creationDate="2009-10-19T10:22:42.609+0200"/>
+      <modelElements xsi:type="org.unicase.model.task:Milestone" identifier="_lKGoELyIEd6icoYWX7z4mg" name="new Milestone" creator="super" creationDate="2009-10-19T10:22:46.298+0200" annotatedModelElements="_1nZEcLyJEd6icoYWX7z4mg" predecessors="_UlnM8LyGEd6icoYWX7z4mg" containedModelElements="__lV3AML6Ed6azJjlbSmpig"/>
+      <modelElements xsi:type="org.unicase.model.task:ActionItem" identifier="_lkuHgLyIEd6icoYWX7z4mg" name="new ActionItem" creator="super" creationDate="2009-10-19T10:22:49.084+0200"/>
+      <modelElements xsi:type="org.unicase.model.attachment:FileAttachment" identifier="_1nZEcLyJEd6icoYWX7z4mg" name="new FileAttachment" creator="super" creationDate="2009-10-19T10:33:18.414+0200" annotations="_lKGoELyIEd6icoYWX7z4mg" attachments="_BYWFsML7Ed6azJjlbSmpig"/>
+    </subsections>
+  </modelElements>
+</org.unicase.model:Project>

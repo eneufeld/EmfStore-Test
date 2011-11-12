@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modelgenerator UI
+Bundle-SymbolicName: org.eclipse.emf.emfstore.modelgenerator.ui;singleton:=true
+Bundle-Version: 0.8.9.M9
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.5.0",
+ org.eclipse.emf.ecore;bundle-version="2.5.0",
+ org.eclipse.jface;bundle-version="3.5.0",
+ org.eclipse.emf.emfstore.modelgenerator.common,
+ org.eclipse.emf.emfstore.modelgenerator,
+ org.eclipse.ui;bundle-version="3.5.0",
+ org.eclipse.emf.emfstore.client
+Export-Package: org.eclipse.emf.emfstore.modelgenerator.ui
+Bundle-Vendor: Eclipse Modeling Project

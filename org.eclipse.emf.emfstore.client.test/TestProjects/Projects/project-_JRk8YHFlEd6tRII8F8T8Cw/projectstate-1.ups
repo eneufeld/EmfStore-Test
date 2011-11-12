@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.model="http://unicase.org/model" xmlns:org.unicase.model.document="http://unicase.org/model/document" xmlns:org.unicase.model.organization="http://unicase.org/model/organization">
+  <modelElements xsi:type="org.unicase.model.document:CompositeSection" identifier="_QH10IHFmEd6dNuII6DrErA" name="Design Document" creator="super" creationDate="2009-07-15T19:38:05.037+0200">
+    <subsections xsi:type="org.unicase.model.document:LeafSection" identifier="_ZoN-MHFmEd6dNuII6DrErA" name="Functional Requirement" creator="super" creationDate="2009-07-15T19:39:08.828+0200">
+      <modelElements xsi:type="org.unicase.model.organization:User" identifier="_c91PIHFmEd6dNuII6DrErA" name="sugar" creator="super" creationDate="2009-07-15T19:39:31.224+0200"/>
+      <modelElements xsi:type="org.unicase.model.organization:User" identifier="_jFOEIHFmEd6dNuII6DrErA" name="salt" creator="super" creationDate="2009-07-15T19:40:12.265+0200"/>
+      <modelElements xsi:type="org.unicase.model.organization:User" identifier="_l6luwHFmEd6dNuII6DrErA" name="chilli" description=";,&#xA;%BEGINNTEXT%" creator="super" creationDate="2009-07-15T19:40:31.283+0200"/>
+      <modelElements xsi:type="org.unicase.model.organization:User" identifier="_oauJMHFmEd6dNuII6DrErA" name="super" creator="super" creationDate="2009-07-15T19:40:48.073+0200"/>
+    </subsections>
+  </modelElements>
+</org.unicase.model:Project>

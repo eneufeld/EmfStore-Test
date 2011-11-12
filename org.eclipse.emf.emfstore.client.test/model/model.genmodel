@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="&lt;copyright> Copyright (c) 2008-2009 Jonas Helming, Maximilian Koegel. All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html &lt;/copyright>&#xD;"
+    modelDirectory="/org.eclipse.emf.emfstore.client.test/src" editDirectory="/org.eclipse.emf.emfstore.client.test/src"
+    modelPluginID="org.eclipse.emf.emfstore.client.test.model" modelName="Model" runtimeCompatibility="true"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" containmentProxies="true"
+    complianceLevel="5.0" copyrightFields="false" providerRootExtendsClass="" language=""
+    usedGenPackages="../../org.eclipse.emf.emfstore.common.model/model/common.genmodel#//model ../../org.eclipse.emf.emfstore.server.model/model/server.genmodel#//model">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="Model" basePackage="org.eclipse.emf.emfstore.client.test" disposableProviderFactory="true"
+      ecorePackage="model.ecore#/">
+    <genClasses image="false" ecoreClass="model.ecore#//UnicaseModelElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UnicaseModelElement/name"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//UnicaseModelElement/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//UnicaseModelElement/annotations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//UnicaseModelElement/attachments"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference model.ecore#//UnicaseModelElement/incomingDocumentReferences"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//UnicaseModelElement/leafSection"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UnicaseModelElement/state"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//UnicaseModelElement/appliedStereotypeInstances"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//UnicaseModelElement/comments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UnicaseModelElement/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UnicaseModelElement/creator"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Annotation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Annotation/annotatedModelElements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//Attachment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Attachment/referringModelElements"/>
+    </genClasses>
+    <nestedGenPackages prefix="Organization" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//organization">
+      <genClasses ecoreClass="model.ecore#//organization/User">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//organization/User/email"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//organization/User/firstName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//organization/User/lastName"/>
+        <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//organization/User/workItemsToReview"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//organization/OrgUnit">
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//organization/OrgUnit/acOrgId"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//organization/OrgUnit/groupMemberships"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//organization/OrgUnit/assignments"/>
+        <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//organization/OrgUnit/participations"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//organization/Group">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//organization/Group/orgUnits"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Task" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//task">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//task/ActivityType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//task/ActivityType/NONE"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//task/ActivityType/ANALYSIS"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//task/ActivityType/SYSTEM_DESIGN"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//task/ActivityType/OBJECT_DESIGN"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//task/ActivityType/IMPLEMENTATION"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//task/ActivityType/TESTING"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//task/ActivityType/MANAGEMENT"/>
+      </genEnums>
+      <genClasses ecoreClass="model.ecore#//task/ActionItem">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/ActionItem/done"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/ActionItem/activity"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//task/WorkPackage">
+        <genFeatures children="true" createChild="true" propertyDescription="" ecoreFeature="ecore:EReference model.ecore#//task/WorkPackage/containedWorkItems"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/WorkPackage/startDate"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/WorkPackage/endDate"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//task/WorkItem">
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//task/WorkItem/containingWorkpackage"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//task/WorkItem/predecessors"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//task/WorkItem/successors"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//task/WorkItem/assignee"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//task/WorkItem/reviewer"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//task/WorkItem/participants"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/WorkItem/dueDate"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/WorkItem/estimate"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/WorkItem/effort"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/WorkItem/priority"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/WorkItem/resolved"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//task/WorkItem/includingReleases"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//task/Milestone">
+        <genFeatures notify="false" children="true" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//task/Milestone/containedModelElements"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//task/Checkable">
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//task/Checkable/checked"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Classes" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//classes">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//classes/AssociationType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/AssociationType/UNDIRECTED_ASSOCIATION"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/AssociationType/DIRECTED_ASSOCIATION"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/AssociationType/AGGREGATION"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/AssociationType/COMPOSITION"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//classes/VisibilityType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/VisibilityType/UNDEFINED"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/VisibilityType/PACKAGE"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/VisibilityType/PRIVATE"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/VisibilityType/GLOBAL"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/VisibilityType/PROTECTED"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//classes/ScopeType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/ScopeType/INSTANCE"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/ScopeType/CLASS"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//classes/ArgumentDirectionType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/ArgumentDirectionType/UNDEFINED"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/ArgumentDirectionType/IN"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/ArgumentDirectionType/OUT"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/ArgumentDirectionType/INOUT"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//classes/InstantiationType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/InstantiationType/Concrete"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/InstantiationType/Abstract"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/InstantiationType/Interface"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//classes/PrimitiveType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/PrimitiveType/String"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/PrimitiveType/Boolean"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/PrimitiveType/Integer"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/PrimitiveType/Date"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/PrimitiveType/Double"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//classes/PrimitiveType/Enumeration"/>
+      </genEnums>
+      <genClasses ecoreClass="model.ecore#//classes/Class">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Class/instantiationType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Class/participatedUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Class/superClasses"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Class/subClasses"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Class/incomingAssociations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Class/outgoingAssociations"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//classes/Class/attributes"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//classes/Class/methods"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Class/demoParticipations"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/Package">
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//classes/Package/containedPackageElements"/>
+        <genFeatures notify="false" createChild="false" propertyCategory="" propertyDescription=""
+            propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//classes/Package/facadeClass"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//classes/PackageElement">
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//classes/PackageElement/parentPackage"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/PackageElement/outgoingDependencies"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/PackageElement/incomingDependencies"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/Association">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Association/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Association/target"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Association/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Association/sourceMultiplicity"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Association/targetMultiplicity"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Association/sourceRole"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Association/targetRole"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Association/transient"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/Attribute">
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//classes/Attribute/definingClass"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/visibility"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/scope"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/signature"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/defaultValue"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/properties"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/label"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/id"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/implementationType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Attribute/implementationEnumeration"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Attribute/transient"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/Method">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Method/visibility"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Method/scope"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Method/returnType"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Method/signature"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//classes/Method/arguments"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Method/properties"/>
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//classes/Method/definingClass"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Method/label"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Method/stubbed"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Method/calledMethods"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Method/callingMethods"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Method/demoParticipations"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/MethodArgument">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/MethodArgument/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/MethodArgument/direction"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/MethodArgument/defaultValue"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/MethodArgument/signature"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/MethodArgument/label"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/Dependency">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Dependency/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Dependency/target"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/Enumeration">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//classes/Enumeration/literals"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//classes/Enumeration/attributes"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//classes/Literal">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//classes/Literal/enumeration"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//classes/Literal/literal"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Document" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//document">
+      <genClasses ecoreClass="model.ecore#//document/LeafSection">
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//document/LeafSection/modelElements"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//document/LeafSection/referencedModelElements"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//document/CompositeSection">
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//document/CompositeSection/subsections"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//document/Section">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//document/Section/parent"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Requirement" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//requirement">
+      <genClasses ecoreClass="model.ecore#//requirement/NonFunctionalRequirement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/NonFunctionalRequirement/restrictedScenarios"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/NonFunctionalRequirement/restrictedUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/NonFunctionalRequirement/systemFunctions"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/NonFunctionalRequirement/userTasks"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/FunctionalRequirement">
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//requirement/FunctionalRequirement/refinedRequirement"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/FunctionalRequirement/storyPoints"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/FunctionalRequirement/priority"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//requirement/FunctionalRequirement/refiningRequirements"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/FunctionalRequirement/useCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/FunctionalRequirement/scenarios"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/FunctionalRequirement/reviewed"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/FunctionalRequirement/stakeholder"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/FunctionalRequirement/cost"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/UseCase">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/initiatingActor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/participatingActors"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/realizedUserTask"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/UseCase/precondition"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/useCaseSteps"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/UseCase/postcondition"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/UseCase/rules"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/UseCase/exception"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/scenarios"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/functionalRequirements"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/nonFunctionalRequirements"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/identifiedClasses"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/includedUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/extendedUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UseCase/systemFunctions"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/Scenario">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/steps"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/initiatingActorInstance"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/participatingActorInstances"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/instantiatedUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/functionalRequirements"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/nonFunctionalRequirements"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/participatingMethods"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Scenario/participatingClasses"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/Actor">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Actor/initiatedUserTask"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Actor/participatedUserTasks"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Actor/initiatedUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Actor/participatedUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Actor/instances"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/ActorInstance">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/ActorInstance/initiatedScenarios"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/ActorInstance/participatedScenarios"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/ActorInstance/instantiatedActor"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/Step">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/Step/userStep"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Step/includedUseCase"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Step/includedSystemFunction"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//requirement/Step/useCase"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/SystemFunction">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/SystemFunction/input"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/SystemFunction/output"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//requirement/SystemFunction/exception"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/SystemFunction/nonFunctionalRequirement"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/SystemFunction/usecases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/SystemFunction/workspace"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/UserTask">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UserTask/initiatingActor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UserTask/participatingActors"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UserTask/realizingUseCases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/UserTask/nonFunctionalRequirements"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//requirement/Workspace">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//requirement/Workspace/systemFunctions"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Rationale" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//rationale">
+      <genClasses ecoreClass="model.ecore#//rationale/Issue">
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//rationale/Issue/proposals"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//rationale/Issue/solution"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//rationale/Issue/criteria"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//rationale/Issue/activity"/>
+        <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//rationale/Issue/assessments"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//rationale/Proposal">
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//rationale/Proposal/assessments"/>
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//rationale/Proposal/issue"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//rationale/Solution">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//rationale/Solution/underlyingProposals"/>
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//rationale/Solution/issue"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//rationale/Criterion">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//rationale/Criterion/assessments"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//rationale/Assessment">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//rationale/Assessment/proposal"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//rationale/Assessment/criterion"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//rationale/Assessment/value"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//rationale/Comment">
+        <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//rationale/Comment/sender"/>
+        <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//rationale/Comment/recipients"/>
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//rationale/Comment/commentedElement"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//rationale/AudioComment">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//rationale/AudioComment/audioFile"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Change" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//change">
+      <genClasses ecoreClass="model.ecore#//change/MergingIssue">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//change/MergingIssue/baseVersion"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//change/MergingIssue/targetVersion"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//change/MergingProposal">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//change/MergingProposal/pendingOperations"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//change/MergingSolution">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//change/MergingSolution/appliedOperations"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Bug" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//bug">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//bug/Severity">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/Severity/FEATURE"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/Severity/TRIVIAL"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/Severity/MINOR"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/Severity/MAJOR"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/Severity/BLOCKER"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//bug/ResolutionType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/ResolutionType/FIXED"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/ResolutionType/CANNOT_REPRODUCE"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//bug/ResolutionType/WONT_FIX"/>
+      </genEnums>
+      <genClasses ecoreClass="model.ecore#//bug/BugReport">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//bug/BugReport/severity"/>
+        <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute model.ecore#//bug/BugReport/resolution"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//bug/BugReport/resolutionType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//bug/BugReport/done"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Component" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//component">
+      <genClasses ecoreClass="model.ecore#//component/Component">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//component/Component/packages"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//component/Component/offeredServices"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//component/Component/consumedServices"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//component/Component/subsystems"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//component/ComponentService">
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//component/ComponentService/offeringComponent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//component/ComponentService/consumingComponents"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//component/DeploymentNode">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//component/DeploymentNode/components"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Meeting" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//meeting">
+      <genClasses ecoreClass="model.ecore#//meeting/Meeting">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//meeting/Meeting/location"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//meeting/Meeting/starttime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//meeting/Meeting/endtime"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/Meeting/facilitator"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/Meeting/minutetaker"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/Meeting/timekeeper"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/Meeting/participants"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//meeting/Meeting/sections"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/Meeting/identifiedIssuesSection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/Meeting/identifiedWorkItemsSection"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//meeting/MeetingSection">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//meeting/MeetingSection/allocatedTime"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//meeting/CompositeMeetingSection">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//meeting/CompositeMeetingSection/subsections"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//meeting/IssueMeetingSection">
+        <genFeatures notify="false" children="true" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/IssueMeetingSection/includedIssues"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//meeting/WorkItemMeetingSection">
+        <genFeatures notify="false" children="true" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//meeting/WorkItemMeetingSection/includedWorkItems"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="State" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//state">
+      <genClasses ecoreClass="model.ecore#//state/State">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//state/State/exitConditions"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//state/State/activities"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//state/State/entryConditions"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//state/Transition">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//state/Transition/condition"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//state/Transition/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//state/Transition/target"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//state/StateNode">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//state/StateNode/outgoingTransitions"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//state/StateNode/incomingTransitions"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//state/StateInitial"/>
+      <genClasses ecoreClass="model.ecore#//state/StateEnd"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Attachment" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//attachment">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//attachment/FileAttachmentType">
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//attachment/FileAttachmentType/BINARY"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//attachment/FileAttachmentType/IMAGE"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//attachment/FileAttachmentType/AUDIO"/>
+        <genEnumLiterals ecoreEnumLiteral="model.ecore#//attachment/FileAttachmentType/VIDEO"/>
+      </genEnums>
+      <genClasses ecoreClass="model.ecore#//attachment/UrlAttachment">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//attachment/UrlAttachment/url"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//attachment/FileAttachment">
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//attachment/FileAttachment/fileName"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//attachment/FileAttachment/fileHash"/>
+        <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//attachment/FileAttachment/fileID"/>
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//attachment/FileAttachment/fileSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//attachment/FileAttachment/fileType"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//attachment/PatchAttachment">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//attachment/PatchAttachment/appliedTo"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Profile" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//profile">
+      <genClasses ecoreClass="model.ecore#//profile/Profile">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//profile/Profile/affectedContainers"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//profile/Profile/stereotypes"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//profile/Stereotype">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//profile/Stereotype/required"/>
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//profile/Stereotype/profile"/>
+        <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//profile/Stereotype/stereotypeInstances"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//profile/Stereotype/stereotypeAttributes"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//profile/StereotypeInstance">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//profile/StereotypeInstance/stereotype"/>
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//profile/StereotypeInstance/modelElement"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//profile/StereotypeInstance/stereotypeAttributeInstances"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//profile/StereotypeAttribute">
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//profile/StereotypeAttribute/stereotype"/>
+        <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//profile/StereotypeAttribute/stereotypeAttributeInstances"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//profile/StereotypeAttributeSimple">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//profile/StereotypeAttributeSimple/type"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//profile/StereotypeAttributeInstance">
+        <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//profile/StereotypeAttributeInstance/stereotypeInstance"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//profile/StereotypeAttributeInstance/stereotypeAttribute"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//profile/StereotypeAttributeInstanceString">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//profile/StereotypeAttributeInstanceString/value"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Util" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//util">
+      <genClasses ecoreClass="model.ecore#//util/ModelElementPath">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//util/ModelElementPath/source"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//util/ModelElementPath/target"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//util/ModelElementPath/path"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Activity" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//activity">
+      <genClasses image="false" ecoreClass="model.ecore#//activity/ActivityObject">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//activity/ActivityObject/incomingTransitions"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//activity/ActivityObject/outgoingTransitions"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//activity/Transition">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//activity/Transition/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//activity/Transition/target"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//activity/Transition/condition"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//activity/Activity"/>
+      <genClasses ecoreClass="model.ecore#//activity/Fork"/>
+      <genClasses ecoreClass="model.ecore#//activity/Branch"/>
+      <genClasses ecoreClass="model.ecore#//activity/ActivityInitial"/>
+      <genClasses ecoreClass="model.ecore#//activity/ActivityEnd"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Release" basePackage="org.eclipse.emf.emfstore.client.test.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//release">
+      <genClasses ecoreClass="model.ecore#//release/Stream">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//release/Stream/releases"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//release/Stream/sourceCodeRepositoryStream"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//release/Release">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference model.ecore#//release/Release/stream"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//release/Release/predecessor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//release/Release/successor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//release/Release/appliedPatches"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//release/Release/includedWorkItems"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//release/Release/sourceCodeRepositoryRevision"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//release/SourceCodeRepositoryRevision"/>
+      <genClasses image="false" ecoreClass="model.ecore#//release/SourceCodeRepositoryStream"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

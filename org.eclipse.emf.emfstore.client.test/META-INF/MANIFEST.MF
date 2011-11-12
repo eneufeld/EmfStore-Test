@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EMFStore Client Tests  (Incubation)
+Bundle-SymbolicName: org.eclipse.emf.emfstore.client.test;singleton:=true
+Bundle-Version: 0.8.9.M901
+Bundle-ClassPath: .,
+ lib/org.apache.commons.io_1.4.0.v20081110-1000.jar
+Bundle-Vendor: Eclipse Modeling Project
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.emf.emfstore.client.test,
+ org.eclipse.emf.emfstore.client.test.changeTracking,
+ org.eclipse.emf.emfstore.client.test.changeTracking.canonization,
+ org.eclipse.emf.emfstore.client.test.changeTracking.commands,
+ org.eclipse.emf.emfstore.client.test.changeTracking.notification.recording,
+ org.eclipse.emf.emfstore.client.test.changeTracking.operations,
+ org.eclipse.emf.emfstore.client.test.changeTracking.topology,
+ org.eclipse.emf.emfstore.client.test.conflictDetection,
+ org.eclipse.emf.emfstore.client.test.integration,
+ org.eclipse.emf.emfstore.client.test.integration.forward,
+ org.eclipse.emf.emfstore.client.test.integration.reversibility,
+ org.eclipse.emf.emfstore.client.test.server,
+ org.eclipse.emf.emfstore.client.test.testmodel,
+ org.eclipse.emf.emfstore.client.test.testmodel.impl,
+ org.eclipse.emf.emfstore.client.test.testmodel.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.junit4;visibility:=reexport,
+ org.eclipse.emf.emfstore.common.model,
+ org.eclipse.emf.emfstore.server.model,
+ org.eclipse.emf.emfstore.client,
+ org.eclipse.emf.emfstore.client.model.edit,
+ org.eclipse.emf.emfstore.modelgenerator;bundle-version="0.8.9",
+ org.eclipse.emf.emfstore.modelgenerator.common;bundle-version="0.8.9"
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.eclipse.emf.emfstore.client.test.Activator

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://eclipse.org/emf/emfstore/client/test/model"
+            class="org.eclipse.emf.emfstore.client.test.model.impl.ModelPackageImpl"
+            genModel="model/testmodel.genmodel"/>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.document.DocumentPackage"
+            genModel="model/testmodel.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/document">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.organization.OrganizationPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/organization">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.task.TaskPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/task">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.classes.ClassesPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/classes">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.requirement.RequirementPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/requirement">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.rationale.RationalePackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/rationale">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.change.ChangePackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/change">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.bug.BugPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/bug">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.component.ComponentPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/component">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.meeting.MeetingPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/meeting">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.state.StatePackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/state">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.util.UtilPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/util">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.release.ReleasePackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/release">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.attachment.AttachmentPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/attachment">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.activity.ActivityPackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/activity">
+      </package>
+      <package
+            class="org.eclipse.emf.emfstore.client.test.model.profile.ProfilePackage"
+            genModel="model/model.genmodel"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/profile">
+      </package>
+   </extension>
+   <extension
+         point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.organization.provider.OrganizationItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/organization">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.task.provider.TaskItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/task">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.provider.ModelItemProviderAdapterFactory"
+            uri="http://eclipse.org/emf/emfstore/client/test/model"
+            supportedTypes = 
+         			"org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+          			 org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+          			 org.eclipse.emf.edit.provider.ITreeItemContentProvider
+          			 org.eclipse.emf.edit.provider.IItemLabelProvider
+          			org.eclipse.emf.edit.provider.IItemPropertySource">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.classes.provider.ClassesItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/classes">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.document.provider.DocumentItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/document">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.requirement.provider.RequirementItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/requirement">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.bug.provider.BugItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/bug">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.change.provider.ChangeItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/change">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.component.provider.ComponentItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/component">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.rationale.provider.RationaleItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/rationale">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.meeting.provider.MeetingItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/meeting">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.state.provider.StateItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/state">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.attachment.provider.AttachmentItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/attachment">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.profile.provider.ProfileItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/profile">
+      </factory>
+      <factory
+            class="org.eclipse.emf.emfstore.client.test.model.activity.provider.ActivityItemProviderAdapterFactory"
+            supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider  org.eclipse.emf.edit.provider.IStructuredItemContentProvider  org.eclipse.emf.edit.provider.ITreeItemContentProvider  org.eclipse.emf.edit.provider.IItemLabelProvider   org.eclipse.emf.edit.provider.IItemPropertySource"
+            uri="http://eclipse.org/emf/emfstore/client/test/model/activity">
+      </factory>
+   </extension>
+
+</plugin>

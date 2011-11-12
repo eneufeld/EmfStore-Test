@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel:ServerSpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.accesscontrol.roles="http://unicase.org/esmodel/accesscontrol/roles" xmlns:org.unicase.emfstore.esmodel="http://unicase.org/emfstore/esmodel">
+  <projects href="project-_V8yywF_2Ed6VgN7WbYkWIw/projectHistory.uph#/"/>
+  <projects href="project-_JRk8YHFlEd6tRII8F8T8Cw/projectHistory.uph#/"/>
+  <users identifier="_4eO54VqNEd6lLO650j9ztQ" name="super" description="default server admin (superuser)" firstName="super" lastName="user">
+    <roles xsi:type="org.unicase.accesscontrol.roles:ServerAdmin"/>
+  </users>
+</org.unicase.emfstore.esmodel:ServerSpace>

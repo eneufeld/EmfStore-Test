@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel:ProjectHistory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.unicase.emfstore.esmodel="http://unicase.org/emfstore/esmodel" projectName="test" projectDescription="">
+  <projectId id="_V8yywF_2Ed6VgN7WbYkWIw"/>
+  <versions href="version-0.upv#/"/>
+  <versions href="version-1.upv#/"/>
+  <versions href="version-2.upv#/"/>
+  <versions href="version-3.upv#/"/>
+  <versions href="version-4.upv#/"/>
+  <versions href="version-5.upv#/"/>
+</org.unicase.emfstore.esmodel:ProjectHistory>

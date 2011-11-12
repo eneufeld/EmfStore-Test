@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:Version xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning">
+  <projectState href="projectstate-5.ups#/"/>
+  <primarySpec identifier="5"/>
+  <previousVersion href="version-4.upv#/"/>
+  <changes href="changepackage-5.ucp#/"/>
+  <logMessage author="super" message="4->5" date="2009-06-23T15:09:17.960+0200" clientDate="2009-06-23T15:09:17.920+0200"/>
+</org.unicase.emfstore.esmodel.versioning:Version>

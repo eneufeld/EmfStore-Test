@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:Version xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning">
+  <projectState href="projectstate-4.ups#/"/>
+  <primarySpec identifier="4"/>
+  <nextVersion href="version-5.upv#/"/>
+  <previousVersion href="version-3.upv#/"/>
+  <changes href="changepackage-4.ucp#/"/>
+  <logMessage author="super" message="sugar's task has done" date="2009-07-15T19:57:06.508+0200" clientDate="2009-07-15T19:57:06.354+0200"/>
+</org.unicase.emfstore.esmodel.versioning:Version>

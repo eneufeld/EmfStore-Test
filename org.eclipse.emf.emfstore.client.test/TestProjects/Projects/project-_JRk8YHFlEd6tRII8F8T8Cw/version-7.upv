@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:Version xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning">
+  <projectState href="projectstate-7.ups#/"/>
+  <primarySpec identifier="7"/>
+  <previousVersion href="version-6.upv#/"/>
+  <changes href="changepackage-7.ucp#/"/>
+  <logMessage author="salt" message="resolved my task" date="2009-07-15T20:05:36.305+0200" clientDate="2009-07-15T20:05:36.257+0200"/>
+</org.unicase.emfstore.esmodel.versioning:Version>

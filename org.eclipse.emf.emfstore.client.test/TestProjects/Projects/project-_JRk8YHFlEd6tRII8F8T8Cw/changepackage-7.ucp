@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:ChangePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning" xmlns:org.unicase.emfstore.esmodel.versioning.events="http://unicase.org/esmodel/versioning/events" xmlns:org.unicase.emfstore.esmodel.versioning.operations="http://unicase.org/esmodel/versioning/operations">
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:AttributeOperation" identifier="_AYm-UHFqEd6dNuII6DrErA" clientDate="2009-07-15T20:04:57.397+0200" featureName="resolved" oldValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787000" newValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001">
+    <modelElementId id="_pjoKoHFpEd6dNuII6DrErA"/>
+  </operations>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-07-15T19:42:26.643+0200">
+    <notifications identifier="_3G0KMHFmEd6dNuII6DrErA" name="Updated Project" message="You updated your project to version 1" creationDate="2009-07-15T19:42:26.643+0200" sender="Update Notification Provider" recipient="salt">
+      <project id="_JRk8YHFlEd6tRII8F8T8Cw"/>
+    </notifications>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:CheckoutEvent" timestamp="2009-07-15T19:42:26.690+0200">
+    <baseVersion identifier="1"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:42:26.766+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:42:26.766+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:42:26.986+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:42:26.986+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-07-15T20:04:25.691+0200">
+    <notifications identifier="_7qPKsHFpEd6dNuII6DrErA" name="Updated Project" message="You updated your project to version 6" creationDate="2009-07-15T20:04:25.691+0200" sender="Update Notification Provider" recipient="salt">
+      <project id="_JRk8YHFlEd6tRII8F8T8Cw"/>
+    </notifications>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T20:04:25.747+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T20:04:25.747+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T20:04:26.000+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T20:04:26.000+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:UpdateEvent" timestamp="2009-07-15T20:04:26.217+0200">
+    <baseVersion identifier="1"/>
+    <targetVersion identifier="6"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T20:04:31.892+0200" pluginId="org.unicase.ui.taskview" startDate="2009-07-15T20:04:31.892+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-07-15T20:04:33.948+0200" sourceView="org.unicase.ui.taskview.TaskView" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_pjoKoHFpEd6dNuII6DrErA"/>
+  </events>
+</org.unicase.emfstore.esmodel.versioning:ChangePackage>

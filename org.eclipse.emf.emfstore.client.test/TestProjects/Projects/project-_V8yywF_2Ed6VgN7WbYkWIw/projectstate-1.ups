@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.model="http://unicase.org/model" xmlns:org.unicase.model.document="http://unicase.org/model/document">
+  <modelElements xsi:type="org.unicase.model.document:CompositeSection" identifier="_YcmdEF_2Ed6XHN4qMyibmA" name="Document 1" creator="super" creationDate="2009-06-23T15:04:27.804+0200"/>
+</org.unicase.model:Project>

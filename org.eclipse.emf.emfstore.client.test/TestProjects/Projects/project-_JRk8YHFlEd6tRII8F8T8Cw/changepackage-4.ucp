@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:ChangePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning" xmlns:org.unicase.emfstore.esmodel.versioning.events="http://unicase.org/esmodel/versioning/events" xmlns:org.unicase.emfstore.esmodel.versioning.operations="http://unicase.org/esmodel/versioning/operations">
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:AttributeOperation" identifier="_zXpe4HFoEd6dNuII6DrErA" clientDate="2009-07-15T19:56:20.558+0200" featureName="done" oldValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787000" newValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001">
+    <modelElementId id="_oWeF4HFnEd6dNuII6DrErA"/>
+  </operations>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-07-15T19:51:03.972+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:51:04.057+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:51:04.057+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:51:04.297+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:51:04.297+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:51:21.203+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:51:21.203+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:51:21.974+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:51:21.975+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:51:30.143+0200" pluginId="org.unicase.ui.repository.views.RepositoryView" startDate="2009-07-15T19:51:30.142+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-07-15T19:51:38.521+0200" sourceView="org.unicase.ui.navigator.TreeView" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_c91PIHFmEd6dNuII6DrErA"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:52:22.760+0200" pluginId="org.unicase.ui.repository.views.RepositoryView" startDate="2009-07-15T19:52:22.760+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-07-15T19:55:58.298+0200">
+    <notifications identifier="_wDXDoHFoEd6dNuII6DrErA" name="Updated Project" message="You updated your project to version 3" creationDate="2009-07-15T19:55:58.298+0200" sender="Update Notification Provider" recipient="super">
+      <project id="_JRk8YHFlEd6tRII8F8T8Cw"/>
+    </notifications>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:55:58.345+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:55:58.345+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:55:58.600+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:55:58.600+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:UpdateEvent" timestamp="2009-07-15T19:55:58.801+0200">
+    <baseVersion identifier="2"/>
+    <targetVersion identifier="3"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:56:07.392+0200" pluginId="org.unicase.ui.taskview" startDate="2009-07-15T19:56:07.392+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-07-15T19:56:11.650+0200" sourceView="org.unicase.ui.taskview.TaskView" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_oWeF4HFnEd6dNuII6DrErA"/>
+  </events>
+</org.unicase.emfstore.esmodel.versioning:ChangePackage>

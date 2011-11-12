@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.unicase.emfstore.esmodel.versioning:ChangePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.unicase.emfstore.esmodel.versioning="http://unicase.org/esmodel/versioning" xmlns:org.unicase.emfstore.esmodel.versioning.events="http://unicase.org/esmodel/versioning/events" xmlns:org.unicase.emfstore.esmodel.versioning.operations="http://unicase.org/esmodel/versioning/operations" xmlns:org.unicase.model.requirement="http://unicase.org/model/requirement" xmlns:org.unicase.model.task="http://unicase.org/model/task">
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:AttributeOperation" identifier="_jI2fkHFpEd6dNuII6DrErA" clientDate="2009-07-15T20:01:41.129+0200" featureName="description" oldValue="ACED0005740000" newValue="ACED000574000F3B2C0A25424547494E4E5445585425">
+    <modelElementId id="_aqAV4HFnEd6dNuII6DrErA"/>
+  </operations>
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:AttributeOperation" identifier="_jK-mgHFpEd6dNuII6DrErA" clientDate="2009-07-15T20:01:41.352+0200" featureName="done" oldValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787000" newValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001">
+    <modelElementId id="_aqAV4HFnEd6dNuII6DrErA"/>
+  </operations>
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:CreateDeleteOperation" identifier="_mYDmgHFpEd6dNuII6DrErA" clientDate="2009-07-15T20:02:02.856+0200">
+    <modelElementId id="_mXN5AHFpEd6dNuII6DrErA"/>
+    <modelElement xsi:type="org.unicase.model.requirement:FunctionalRequirement" identifier="_mXN5AHFpEd6dNuII6DrErA" name="Favor" description=";,&#xA;%BEGINNTEXT%Not so salty" creator="super" creationDate="2009-07-15T20:02:02.847+0200"/>
+  </operations>
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:MultiReferenceOperation" identifier="_mYLiUHFpEd6dNuII6DrErA" clientDate="2009-07-15T20:02:02.869+0200" featureName="modelElements" bidirectional="true" oppositeFeatureName="leafSection" add="true" index="5">
+    <modelElementId id="_ZoN-MHFmEd6dNuII6DrErA"/>
+    <referencedModelElements id="_mXN5AHFpEd6dNuII6DrErA"/>
+  </operations>
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:CreateDeleteOperation" identifier="_pjwtgHFpEd6dNuII6DrErA" clientDate="2009-07-15T20:02:24.216+0200">
+    <modelElementId id="_pjoKoHFpEd6dNuII6DrErA"/>
+    <modelElement xsi:type="org.unicase.model.task:ActionItem" identifier="_pjoKoHFpEd6dNuII6DrErA" name="Prepare food" description=";,&#xA;%BEGINNTEXT%" creator="super" creationDate="2009-07-15T20:02:24.211+0200"/>
+  </operations>
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:MultiReferenceOperation" identifier="_pkbb4HFpEd6dNuII6DrErA" clientDate="2009-07-15T20:02:24.286+0200" featureName="annotations" bidirectional="true" oppositeFeatureName="annotatedModelElements" add="true">
+    <modelElementId id="_mXN5AHFpEd6dNuII6DrErA"/>
+    <referencedModelElements id="_pjoKoHFpEd6dNuII6DrErA"/>
+  </operations>
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:SingleReferenceOperation" identifier="_tblToHFpEd6dNuII6DrErA" clientDate="2009-07-15T20:02:50.202+0200" featureName="assignee" bidirectional="true" oppositeFeatureName="assignments">
+    <modelElementId id="_pjoKoHFpEd6dNuII6DrErA"/>
+    <newValue id="_jFOEIHFmEd6dNuII6DrErA"/>
+  </operations>
+  <operations xsi:type="org.unicase.emfstore.esmodel.versioning.operations:SingleReferenceOperation" identifier="_vFaYMHFpEd6dNuII6DrErA" clientDate="2009-07-15T20:03:01.299+0200" featureName="reviewer" bidirectional="true" oppositeFeatureName="workItemsToReview">
+    <modelElementId id="_pjoKoHFpEd6dNuII6DrErA"/>
+    <newValue id="_oauJMHFmEd6dNuII6DrErA"/>
+  </operations>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-07-15T19:57:06.955+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:57:07.008+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T19:57:07.008+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T19:57:18.844+0200" pluginId="org.unicase.ui.repository.views.RepositoryView" startDate="2009-07-15T19:57:18.844+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:NotificationGenerationEvent" timestamp="2009-07-15T20:01:25.913+0200">
+    <notifications identifier="_g3vYkHFpEd6dNuII6DrErA" name="Updated Project" message="You updated your project to version 5" creationDate="2009-07-15T20:01:25.913+0200" sender="Update Notification Provider" recipient="super">
+      <project id="_JRk8YHFlEd6tRII8F8T8Cw"/>
+    </notifications>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T20:01:25.957+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T20:01:25.957+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T20:01:26.236+0200" pluginId="org.unicase.workspace.ui.dashboard" startDate="2009-07-15T20:01:26.236+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:UpdateEvent" timestamp="2009-07-15T20:01:26.463+0200">
+    <baseVersion identifier="4"/>
+    <targetVersion identifier="5"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T20:01:27.122+0200" pluginId="org.unicase.ui.repository.views.RepositoryView" startDate="2009-07-15T20:01:27.122+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:PluginFocusEvent" timestamp="2009-07-15T20:01:28.921+0200" pluginId="org.unicase.ui.taskview" startDate="2009-07-15T20:01:28.921+0200"/>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-07-15T20:01:31.949+0200" sourceView="org.unicase.ui.taskview.TaskView" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_aqAV4HFnEd6dNuII6DrErA"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-07-15T20:02:02.891+0200" sourceView="org.unicase.ui.navigator.commands.CreateMEHandler" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_mXN5AHFpEd6dNuII6DrErA"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:AnnotationEvent" timestamp="2009-07-15T20:02:24.543+0200">
+    <annotatedElement id="_mXN5AHFpEd6dNuII6DrErA"/>
+    <annotation id="_pjoKoHFpEd6dNuII6DrErA"/>
+  </events>
+  <events xsi:type="org.unicase.emfstore.esmodel.versioning.events:ReadEvent" timestamp="2009-07-15T20:02:24.555+0200" sourceView="org.unicase.ui.common.handlers.AddAnnotationHandler" readView="org.unicase.ui.meeditor.MEEditor">
+    <modelElement id="_pjoKoHFpEd6dNuII6DrErA"/>
+  </events>
+</org.unicase.emfstore.esmodel.versioning:ChangePackage>
