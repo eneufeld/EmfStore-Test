@@ -2,6 +2,7 @@ package org.eclipse.emf.emfstore.client.test.server;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -64,13 +65,15 @@ public class ModelGeneratorTest extends ServerTests {
 		projectSpace.eResource().getContents().add(session.getServerInfo());
 
 		EPackage pckge = ModelGeneratorUtil.getEPackage(modelKey);
-		generate(projectSpace.getProject(), pckge, width, depth);
+		// generate(projectSpace.getProject(), pckge, width, depth);
+		EClass validClass = getValidEClass(projectSpace.getProject(), pckge, new ArrayList<EClass>());
 		// ModelGeneratorConfiguration configuration = new ModelGeneratorConfiguration(pckge, projectSpace.getProject(),
 		// new HashSet<EClass>(), width, depth, System.currentTimeMillis(), true);
 		// EObject root = ModelGenerator.generateModel(configuration);
 		// projectSpace.setProject((Project) root);
 		// projectSpace.eResource().getContents().add(root);
-
+		EObject obj = ModelGenerator.generateModel(pckge, validClass);
+		projectSpace.getProject().addModelElement(obj);
 		// count num of projects
 		assertTrue(getConnectionManager().getProjectList(getSessionId()).size() == getProjectsOnServerBeforeTest());
 		// add project to Server
