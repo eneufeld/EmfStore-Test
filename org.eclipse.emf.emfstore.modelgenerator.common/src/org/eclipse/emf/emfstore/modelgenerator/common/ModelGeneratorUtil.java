@@ -5,6 +5,7 @@
  */
 package org.eclipse.emf.emfstore.modelgenerator.common;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Collection;
 import java.util.Collections;
@@ -655,7 +656,8 @@ public final class ModelGeneratorUtil {
 	 */
 	public static void delete(EObject eObject, Set<RuntimeException> exceptionLog, boolean ignoreAndLog) {
 		try {
-			EcoreUtil.delete(eObject);
+//			EcoreUtil.delete(eObject);
+			removePerCommand(eObject.eContainer(), eObject.eClass().eContainingFeature(), Arrays.asList(eObject), exceptionLog, ignoreAndLog);
 		} catch(RuntimeException e) {
 			handle(e, exceptionLog, ignoreAndLog);
 		}

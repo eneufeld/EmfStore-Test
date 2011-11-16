@@ -113,12 +113,12 @@ public final class ModelChanger {
 				continue;
 			}
 			if(ModelChangerHelper.randomDelete()) {
-				new DeleteModelElementCommand(eObject, new EMFStoreECPProject((ProjectSpace)parent.eContainer())).run();
+//				new DeleteModelElementCommand(eObject, new EMFStoreECPProject((ProjectSpace)parent.eContainer())).run();
 				// copy all children first to prevent concurrent modifications when deleting
 //				Set<EObject> contentCopy = new LinkedHashSet<EObject>(eObject.eContents());
-//				
+////				
 //				deletedChildren.addAll(deleteAllChildren(contentCopy));
-//				ModelChangerHelper.delete(eObject);
+				ModelChangerHelper.delete(eObject);
 			}
 		}
 	}
