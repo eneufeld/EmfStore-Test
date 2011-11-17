@@ -19,6 +19,7 @@
     <genClasses ecoreClass="bowling.ecore#//League">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//League/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//League/players"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//League/SubLeague"/>
     </genClasses>
     <genClasses ecoreClass="bowling.ecore#//Tournament">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//Tournament/matchups"/>

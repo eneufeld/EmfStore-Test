@@ -210,6 +210,15 @@ public class BowlingPackageImpl extends EPackageImpl implements BowlingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLeague_SubLeague() {
+		return (EReference)leagueEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTournament() {
 		return tournamentEClass;
 	}
@@ -332,6 +341,7 @@ public class BowlingPackageImpl extends EPackageImpl implements BowlingPackage {
 		leagueEClass = createEClass(LEAGUE);
 		createEAttribute(leagueEClass, LEAGUE__NAME);
 		createEReference(leagueEClass, LEAGUE__PLAYERS);
+		createEReference(leagueEClass, LEAGUE__SUB_LEAGUE);
 
 		tournamentEClass = createEClass(TOURNAMENT);
 		createEReference(tournamentEClass, TOURNAMENT__MATCHUPS);
@@ -388,6 +398,7 @@ public class BowlingPackageImpl extends EPackageImpl implements BowlingPackage {
 		initEClass(leagueEClass, League.class, "League", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLeague_Name(), ecorePackage.getEString(), "name", null, 0, 1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLeague_Players(), this.getPlayer(), null, "players", null, 0, -1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLeague_SubLeague(), this.getLeague(), null, "SubLeague", null, 0, -1, League.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tournamentEClass, Tournament.class, "Tournament", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTournament_Matchups(), this.getMatchup(), null, "matchups", null, 0, -1, Tournament.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

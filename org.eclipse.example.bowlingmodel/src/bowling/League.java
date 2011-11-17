@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link bowling.League#getName <em>Name</em>}</li>
  *   <li>{@link bowling.League#getPlayers <em>Players</em>}</li>
+ *   <li>{@link bowling.League#getSubLeague <em>Sub League</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,5 +70,21 @@ public interface League extends EObject {
 	 * @generated
 	 */
 	EList<Player> getPlayers();
+
+	/**
+	 * Returns the value of the '<em><b>Sub League</b></em>' containment reference list.
+	 * The list contents are of type {@link bowling.League}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sub League</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sub League</em>' containment reference list.
+	 * @see bowling.BowlingPackage#getLeague_SubLeague()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<League> getSubLeague();
 
 } // League

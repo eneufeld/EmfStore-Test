@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link bowling.impl.LeagueImpl#getName <em>Name</em>}</li>
  *   <li>{@link bowling.impl.LeagueImpl#getPlayers <em>Players</em>}</li>
+ *   <li>{@link bowling.impl.LeagueImpl#getSubLeague <em>Sub League</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +71,16 @@ public class LeagueImpl extends EObjectImpl implements League {
 	 * @ordered
 	 */
 	protected EList<Player> players;
+
+	/**
+	 * The cached value of the '{@link #getSubLeague() <em>Sub League</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubLeague()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<League> subLeague;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,11 +139,25 @@ public class LeagueImpl extends EObjectImpl implements League {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<League> getSubLeague() {
+		if (subLeague == null) {
+			subLeague = new EObjectContainmentEList<League>(League.class, this, BowlingPackage.LEAGUE__SUB_LEAGUE);
+		}
+		return subLeague;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case BowlingPackage.LEAGUE__PLAYERS:
 				return ((InternalEList<?>)getPlayers()).basicRemove(otherEnd, msgs);
+			case BowlingPackage.LEAGUE__SUB_LEAGUE:
+				return ((InternalEList<?>)getSubLeague()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -149,6 +174,8 @@ public class LeagueImpl extends EObjectImpl implements League {
 				return getName();
 			case BowlingPackage.LEAGUE__PLAYERS:
 				return getPlayers();
+			case BowlingPackage.LEAGUE__SUB_LEAGUE:
+				return getSubLeague();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,6 +196,10 @@ public class LeagueImpl extends EObjectImpl implements League {
 				getPlayers().clear();
 				getPlayers().addAll((Collection<? extends Player>)newValue);
 				return;
+			case BowlingPackage.LEAGUE__SUB_LEAGUE:
+				getSubLeague().clear();
+				getSubLeague().addAll((Collection<? extends League>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -187,6 +218,9 @@ public class LeagueImpl extends EObjectImpl implements League {
 			case BowlingPackage.LEAGUE__PLAYERS:
 				getPlayers().clear();
 				return;
+			case BowlingPackage.LEAGUE__SUB_LEAGUE:
+				getSubLeague().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,6 +237,8 @@ public class LeagueImpl extends EObjectImpl implements League {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BowlingPackage.LEAGUE__PLAYERS:
 				return players != null && !players.isEmpty();
+			case BowlingPackage.LEAGUE__SUB_LEAGUE:
+				return subLeague != null && !subLeague.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

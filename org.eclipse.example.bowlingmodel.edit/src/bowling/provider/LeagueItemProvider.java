@@ -107,6 +107,7 @@ public class LeagueItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BowlingPackage.Literals.LEAGUE__PLAYERS);
+			childrenFeatures.add(BowlingPackage.Literals.LEAGUE__SUB_LEAGUE);
 		}
 		return childrenFeatures;
 	}
@@ -165,6 +166,7 @@ public class LeagueItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case BowlingPackage.LEAGUE__PLAYERS:
+			case BowlingPackage.LEAGUE__SUB_LEAGUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -186,6 +188,11 @@ public class LeagueItemProvider
 			(createChildParameter
 				(BowlingPackage.Literals.LEAGUE__PLAYERS,
 				 BowlingFactory.eINSTANCE.createPlayer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BowlingPackage.Literals.LEAGUE__SUB_LEAGUE,
+				 BowlingFactory.eINSTANCE.createLeague()));
 	}
 
 	/**
