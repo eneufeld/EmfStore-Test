@@ -6,12 +6,31 @@
     complianceLevel="6.0" copyrightFields="false">
   <foreignModel>bowling.ecore</foreignModel>
   <genPackages prefix="Bowling" disposableProviderFactory="true" ecorePackage="bowling.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bowling.ecore#//TournamentType">
+      <genEnumLiterals ecoreEnumLiteral="bowling.ecore#//TournamentType/Pro"/>
+      <genEnumLiterals ecoreEnumLiteral="bowling.ecore#//TournamentType/Amateur"/>
+    </genEnums>
     <genClasses ecoreClass="bowling.ecore#//Player">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//Player/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//Player/dateOfBirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//Player/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//Player/isProfessional"/>
     </genClasses>
     <genClasses ecoreClass="bowling.ecore#//League">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//League/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//League/players"/>
+    </genClasses>
+    <genClasses ecoreClass="bowling.ecore#//Tournament">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//Tournament/matchups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//Tournament/type"/>
+    </genClasses>
+    <genClasses ecoreClass="bowling.ecore#//Matchup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//Matchup/games"/>
+    </genClasses>
+    <genClasses ecoreClass="bowling.ecore#//Game">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference bowling.ecore#//Game/matchup"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bowling.ecore#//Game/player"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//Game/frames"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
