@@ -48,13 +48,13 @@ public class ModelGeneratorConfiguration {
 	 * Maximum width of models to generate.
 	 * Defaults to 3.
 	 */
-	private int width = 4;
+	private int width = 3;
 	
 	/**
 	 * Maximum value of the generated model's hierarchy depth.
 	 * Defaults to 3. 
 	 */
-	private int depth = 5;
+	private int depth = 3;
 	
 	
 	/**

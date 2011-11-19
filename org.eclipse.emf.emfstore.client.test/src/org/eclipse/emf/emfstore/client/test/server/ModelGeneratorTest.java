@@ -35,7 +35,7 @@ public class ModelGeneratorTest extends ServerTests {
 	private ProjectInfo projectInfo;
 	private ProjectSpace projectSpace;
 	private String modelKey = "http://org/eclipse/example/bowling";
-	private int width = 4;
+	private int width = 5;
 	private int depth = 5;
 	private String projectName = "generated";
 	private String projectDescription = "TestProject2";
@@ -65,26 +65,22 @@ public class ModelGeneratorTest extends ServerTests {
 		projectSpace.eResource().getContents().add(session.getServerInfo());
 
 		EPackage pckge = ModelGeneratorUtil.getEPackage(modelKey);
-		// generate(projectSpace.getProject(), pckge, width, depth);
+
 		EClass validClass = getValidEClass(projectSpace.getProject(), pckge, new ArrayList<EClass>());
-		// ModelGeneratorConfiguration configuration = new ModelGeneratorConfiguration(pckge, projectSpace.getProject(),
-		// new HashSet<EClass>(), width, depth, System.currentTimeMillis(), true);
-		// EObject root = ModelGenerator.generateModel(configuration);
-		// projectSpace.setProject((Project) root);
-		// projectSpace.eResource().getContents().add(root);
-		EObject obj = ModelGenerator.generateModel(pckge, validClass);
+		ModelGeneratorConfiguration config = new ModelGeneratorConfiguration(pckge, validClass, width, depth);
+
+		EObject obj = ModelGenerator.generateModel(config);
 		projectSpace.getProject().addModelElement(obj);
+
 		// count num of projects
 		assertTrue(getConnectionManager().getProjectList(getSessionId()).size() == getProjectsOnServerBeforeTest());
+
 		// add project to Server
-		// projectInfo = getConnectionManager().createProject(getSessionId(), projectName, projectDescription,
-		// SetupHelper.createLogMessage("super", "a logmessage"), fullProject);
 		projectSpace.shareProject(session);
 		projectInfo = projectSpace.getProjectInfo();
+
 		// check that number increased
 		assertTrue(getConnectionManager().getProjectList(getSessionId()).size() == getProjectsOnServerBeforeTest() + 1);
-		// check if local project and remote are equal
-
 	}
 
 	private EClass getValidEClass(EObject root, EPackage pckge, List<EClass> ignoredClasses) {
@@ -105,45 +101,6 @@ public class ModelGeneratorTest extends ServerTests {
 		}
 		Collections.shuffle(allEClasses);
 		return allEClasses.get(0);
-	}
-
-	private void generate(EObject rootObject, EPackage pckge, int width, int depth) {
-		List<EClass> ignoredClasses = new LinkedList<EClass>();
-		// create width subroots
-		for (int i = 0; i < width; i++) {
-			EClass subRootClass = getValidEClass(rootObject, pckge, ignoredClasses);
-			if (subRootClass == null) {
-				// no valid EClasses left -> cancel process
-				return;
-			}
-			ModelGeneratorConfiguration config = new ModelGeneratorConfiguration(pckge, subRootClass, ignoredClasses,
-				width, depth - 1, System.currentTimeMillis(), true);
-			// generate sub-hierarchy and add the new subroot as a child to the actual root
-			addAsChild(rootObject, ModelGenerator.generateModel(config));
-		}
-	}
-
-	private void addAsChild(EObject parentEObject, EObject childObject) {
-		if (parentEObject instanceof Project) {
-			((Project) parentEObject).addModelElement(childObject);
-			return;
-		}
-		for (EReference reference : ModelGeneratorUtil.getAllPossibleContainingReferences(childObject.eClass(),
-			parentEObject.eClass())) {
-			if (reference.isMany()) {
-				// was the adding successful?
-				if (ModelGeneratorUtil.addPerCommand(parentEObject, reference, childObject, null, false) != null) {
-					// then we are done
-					return;
-				}
-			} else {
-				// was setting the reference successful?
-				if (ModelGeneratorUtil.setPerCommand(parentEObject, reference, childObject, null, false) != null) {
-					// then we are done
-					return;
-				}
-			}
-		}
 	}
 
 	@Test
