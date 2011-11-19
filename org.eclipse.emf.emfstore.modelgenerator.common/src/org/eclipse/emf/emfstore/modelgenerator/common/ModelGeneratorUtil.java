@@ -561,7 +561,10 @@ public final class ModelGeneratorUtil {
 						break;
 					}
 				}
-			} else if (reference.isRequired() || random.nextBoolean()){
+			//Change of referencing
+			// Delete reference.isRequired() in order to set 0..1 references
+			//} else if (reference.isRequired() || random.nextBoolean()){
+			} else if (random.nextBoolean()) {
 				ModelGeneratorUtil.setPerCommand(eObject, reference, possibleReferenceObjects.get(index),
 					exceptionLog, ignoreAndLog);
 			}
