@@ -10,6 +10,7 @@ import bowling.BowlingPackage;
 import bowling.League;
 import bowling.Player;
 
+import bowling.Tournament;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -35,7 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link bowling.impl.LeagueImpl#getName <em>Name</em>}</li>
  *   <li>{@link bowling.impl.LeagueImpl#getPlayers <em>Players</em>}</li>
- *   <li>{@link bowling.impl.LeagueImpl#getSubLeague <em>Sub League</em>}</li>
+ *   <li>{@link bowling.impl.LeagueImpl#getSubleagues <em>Subleagues</em>}</li>
+ *   <li>{@link bowling.impl.LeagueImpl#getTournaments <em>Tournaments</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,14 +75,24 @@ public class LeagueImpl extends EObjectImpl implements League {
 	protected EList<Player> players;
 
 	/**
-	 * The cached value of the '{@link #getSubLeague() <em>Sub League</em>}' containment reference list.
+	 * The cached value of the '{@link #getSubleagues() <em>Subleagues</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubLeague()
+	 * @see #getSubleagues()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<League> subLeague;
+	protected EList<League> subleagues;
+
+	/**
+	 * The cached value of the '{@link #getTournaments() <em>Tournaments</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTournaments()
+	 * @generated
+	 * @ordered
+	 */
+	protected Tournament tournaments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,11 +151,54 @@ public class LeagueImpl extends EObjectImpl implements League {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<League> getSubLeague() {
-		if (subLeague == null) {
-			subLeague = new EObjectContainmentEList<League>(League.class, this, BowlingPackage.LEAGUE__SUB_LEAGUE);
+	public EList<League> getSubleagues() {
+		if (subleagues == null) {
+			subleagues = new EObjectContainmentEList<League>(League.class, this, BowlingPackage.LEAGUE__SUBLEAGUES);
 		}
-		return subLeague;
+		return subleagues;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tournament getTournaments() {
+		return tournaments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTournaments(Tournament newTournaments, NotificationChain msgs) {
+		Tournament oldTournaments = tournaments;
+		tournaments = newTournaments;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BowlingPackage.LEAGUE__TOURNAMENTS, oldTournaments, newTournaments);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTournaments(Tournament newTournaments) {
+		if (newTournaments != tournaments) {
+			NotificationChain msgs = null;
+			if (tournaments != null)
+				msgs = ((InternalEObject)tournaments).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BowlingPackage.LEAGUE__TOURNAMENTS, null, msgs);
+			if (newTournaments != null)
+				msgs = ((InternalEObject)newTournaments).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BowlingPackage.LEAGUE__TOURNAMENTS, null, msgs);
+			msgs = basicSetTournaments(newTournaments, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BowlingPackage.LEAGUE__TOURNAMENTS, newTournaments, newTournaments));
 	}
 
 	/**
@@ -156,8 +211,10 @@ public class LeagueImpl extends EObjectImpl implements League {
 		switch (featureID) {
 			case BowlingPackage.LEAGUE__PLAYERS:
 				return ((InternalEList<?>)getPlayers()).basicRemove(otherEnd, msgs);
-			case BowlingPackage.LEAGUE__SUB_LEAGUE:
-				return ((InternalEList<?>)getSubLeague()).basicRemove(otherEnd, msgs);
+			case BowlingPackage.LEAGUE__SUBLEAGUES:
+				return ((InternalEList<?>)getSubleagues()).basicRemove(otherEnd, msgs);
+			case BowlingPackage.LEAGUE__TOURNAMENTS:
+				return basicSetTournaments(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -174,8 +231,10 @@ public class LeagueImpl extends EObjectImpl implements League {
 				return getName();
 			case BowlingPackage.LEAGUE__PLAYERS:
 				return getPlayers();
-			case BowlingPackage.LEAGUE__SUB_LEAGUE:
-				return getSubLeague();
+			case BowlingPackage.LEAGUE__SUBLEAGUES:
+				return getSubleagues();
+			case BowlingPackage.LEAGUE__TOURNAMENTS:
+				return getTournaments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,9 +255,12 @@ public class LeagueImpl extends EObjectImpl implements League {
 				getPlayers().clear();
 				getPlayers().addAll((Collection<? extends Player>)newValue);
 				return;
-			case BowlingPackage.LEAGUE__SUB_LEAGUE:
-				getSubLeague().clear();
-				getSubLeague().addAll((Collection<? extends League>)newValue);
+			case BowlingPackage.LEAGUE__SUBLEAGUES:
+				getSubleagues().clear();
+				getSubleagues().addAll((Collection<? extends League>)newValue);
+				return;
+			case BowlingPackage.LEAGUE__TOURNAMENTS:
+				setTournaments((Tournament)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,8 +280,11 @@ public class LeagueImpl extends EObjectImpl implements League {
 			case BowlingPackage.LEAGUE__PLAYERS:
 				getPlayers().clear();
 				return;
-			case BowlingPackage.LEAGUE__SUB_LEAGUE:
-				getSubLeague().clear();
+			case BowlingPackage.LEAGUE__SUBLEAGUES:
+				getSubleagues().clear();
+				return;
+			case BowlingPackage.LEAGUE__TOURNAMENTS:
+				setTournaments((Tournament)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -237,8 +302,10 @@ public class LeagueImpl extends EObjectImpl implements League {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BowlingPackage.LEAGUE__PLAYERS:
 				return players != null && !players.isEmpty();
-			case BowlingPackage.LEAGUE__SUB_LEAGUE:
-				return subLeague != null && !subLeague.isEmpty();
+			case BowlingPackage.LEAGUE__SUBLEAGUES:
+				return subleagues != null && !subleagues.isEmpty();
+			case BowlingPackage.LEAGUE__TOURNAMENTS:
+				return tournaments != null;
 		}
 		return super.eIsSet(featureID);
 	}

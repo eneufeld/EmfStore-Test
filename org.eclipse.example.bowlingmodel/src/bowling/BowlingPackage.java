@@ -144,13 +144,22 @@ public interface BowlingPackage extends EPackage {
 	int LEAGUE__PLAYERS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Sub League</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Subleagues</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAGUE__SUB_LEAGUE = 2;
+	int LEAGUE__SUBLEAGUES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Tournaments</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAGUE__TOURNAMENTS = 3;
 
 	/**
 	 * The number of structural features of the '<em>League</em>' class.
@@ -159,7 +168,7 @@ public interface BowlingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEAGUE_FEATURE_COUNT = 3;
+	int LEAGUE_FEATURE_COUNT = 4;
 
 
 	/**
@@ -371,15 +380,26 @@ public interface BowlingPackage extends EPackage {
 	EReference getLeague_Players();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link bowling.League#getSubLeague <em>Sub League</em>}'.
+	 * Returns the meta object for the containment reference list '{@link bowling.League#getSubleagues <em>Subleagues</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub League</em>'.
-	 * @see bowling.League#getSubLeague()
+	 * @return the meta object for the containment reference list '<em>Subleagues</em>'.
+	 * @see bowling.League#getSubleagues()
 	 * @see #getLeague()
 	 * @generated
 	 */
-	EReference getLeague_SubLeague();
+	EReference getLeague_Subleagues();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link bowling.League#getTournaments <em>Tournaments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tournaments</em>'.
+	 * @see bowling.League#getTournaments()
+	 * @see #getLeague()
+	 * @generated
+	 */
+	EReference getLeague_Tournaments();
 
 	/**
 	 * Returns the meta object for class '{@link bowling.Tournament <em>Tournament</em>}'.
@@ -578,12 +598,20 @@ public interface BowlingPackage extends EPackage {
 		EReference LEAGUE__PLAYERS = eINSTANCE.getLeague_Players();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub League</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Subleagues</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LEAGUE__SUB_LEAGUE = eINSTANCE.getLeague_SubLeague();
+		EReference LEAGUE__SUBLEAGUES = eINSTANCE.getLeague_Subleagues();
+
+		/**
+		 * The meta object literal for the '<em><b>Tournaments</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEAGUE__TOURNAMENTS = eINSTANCE.getLeague_Tournaments();
 
 		/**
 		 * The meta object literal for the '{@link bowling.impl.TournamentImpl <em>Tournament</em>}' class.

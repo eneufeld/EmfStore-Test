@@ -107,7 +107,8 @@ public class LeagueItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BowlingPackage.Literals.LEAGUE__PLAYERS);
-			childrenFeatures.add(BowlingPackage.Literals.LEAGUE__SUB_LEAGUE);
+			childrenFeatures.add(BowlingPackage.Literals.LEAGUE__SUBLEAGUES);
+			childrenFeatures.add(BowlingPackage.Literals.LEAGUE__TOURNAMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -166,7 +167,8 @@ public class LeagueItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case BowlingPackage.LEAGUE__PLAYERS:
-			case BowlingPackage.LEAGUE__SUB_LEAGUE:
+			case BowlingPackage.LEAGUE__SUBLEAGUES:
+			case BowlingPackage.LEAGUE__TOURNAMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,8 +193,13 @@ public class LeagueItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BowlingPackage.Literals.LEAGUE__SUB_LEAGUE,
+				(BowlingPackage.Literals.LEAGUE__SUBLEAGUES,
 				 BowlingFactory.eINSTANCE.createLeague()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BowlingPackage.Literals.LEAGUE__TOURNAMENTS,
+				 BowlingFactory.eINSTANCE.createTournament()));
 	}
 
 	/**
