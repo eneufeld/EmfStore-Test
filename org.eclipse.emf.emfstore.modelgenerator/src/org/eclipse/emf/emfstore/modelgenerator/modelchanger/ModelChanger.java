@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecp.common.commands.DeleteModelElementCommand;
 import org.eclipse.emf.ecp.common.model.ECPWorkspaceManager;
 import org.eclipse.emf.ecp.emfstorebridge.EMFStoreECPProject;
@@ -71,7 +72,7 @@ public final class ModelChanger {
 		ModelChangerHelper.init(seed, ignoreAndLog);
 		Set<EObject> allChildren = ModelChangerHelper.getAllChildren(rootObject); 
 		deleteRandomEObjects(allChildren,rootObject);
-		changeAttributesAndReferences(rootObject);
+//		changeAttributesAndReferences(rootObject);
 	}
 	
 	/**
@@ -105,6 +106,7 @@ public final class ModelChanger {
 		changeAttributesAndReferences(rootObject, monitor);
 	}
 
+	
 	/**
 	 * Randomly deletes EObjects and their children from a set of EObjects.
 	 * <code>allChildren</code> shouldn't contain the rootObject, so the
@@ -122,13 +124,18 @@ public final class ModelChanger {
 			if(deletedChildren.contains(eObject)) {
 				continue;
 			}
-			if(ModelChangerHelper.randomDelete()&&!(eObject.eContainer() instanceof Project)) {//
-//				new DeleteModelElementCommand(eObject, new EMFStoreECPProject((ProjectSpace)parent.eContainer())).run();
+			
+			if(ModelChangerHelper.randomDelete()) {//
+				
 				// copy all children first to prevent concurrent modifications when deleting
-//				Set<EObject> contentCopy = new LinkedHashSet<EObject>(eObject.eContents());
-////				
-//				deletedChildren.addAll(deleteAllChildren(contentCopy));
-				ModelChangerHelper.delete(eObject);
+				Set<EObject> contentCopy = new LinkedHashSet<EObject>(eObject.eContents());	
+				deletedChildren.addAll(deleteAllChildren(contentCopy));
+//				if(deleteUsingCommand)
+				System.out.println(eObject.toString());
+					ModelChangerHelper.delete(eObject);
+//				else
+//					EcoreUtil.delete(eObject,true);
+//				
 			}
 		}
 	}

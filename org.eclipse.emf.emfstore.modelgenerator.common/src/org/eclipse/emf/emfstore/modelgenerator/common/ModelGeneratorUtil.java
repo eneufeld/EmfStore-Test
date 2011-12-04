@@ -660,7 +660,7 @@ public final class ModelGeneratorUtil {
 	public static void delete(EObject eObject, Set<RuntimeException> exceptionLog, boolean ignoreAndLog) {
 		try {
 			EcoreUtil.delete(eObject,true);
-//			removePerCommand(eObject.eContainer(), eObject.eClass().eContainingFeature(), Arrays.asList(eObject), exceptionLog, ignoreAndLog);
+			
 		} catch(RuntimeException e) {
 			handle(e, exceptionLog, ignoreAndLog);
 		}
