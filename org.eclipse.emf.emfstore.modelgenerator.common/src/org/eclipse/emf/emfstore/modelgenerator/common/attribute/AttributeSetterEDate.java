@@ -37,8 +37,8 @@ class AttributeSetterEDate implements IAttributeSetter<Date> {
 	 * {@inheritDoc}
 	 */
 	public Date createNewAttribute() {
-		long max = System.currentTimeMillis() + 1000000000000L;
-		long min = System.currentTimeMillis() - 1000000000000L;
+		long max = random.nextLong() + 1000000000000L;
+		long min = random.nextLong() - 1000000000000L;
 		long date = (long) (random.nextDouble() * (max-min)) + min;
 		return new Date(date);
 	}

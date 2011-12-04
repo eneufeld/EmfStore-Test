@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -35,8 +36,8 @@ public class ModelGeneratorTest extends ServerTests {
 	private ProjectInfo projectInfo;
 	private ProjectSpace projectSpace;
 	private String modelKey = "http://org/eclipse/example/bowling";
-	private int width = 5;
-	private int depth = 5;
+	private int width = 10;
+	private int depth = 2;
 	private String projectName = "generated";
 	private String projectDescription = "TestProject2";
 
@@ -66,11 +67,12 @@ public class ModelGeneratorTest extends ServerTests {
 
 		EPackage pckge = ModelGeneratorUtil.getEPackage(modelKey);
 
-		EClass validClass = getValidEClass(projectSpace.getProject(), pckge, new ArrayList<EClass>());
-		ModelGeneratorConfiguration config = new ModelGeneratorConfiguration(pckge, validClass, width, depth);
-
-		EObject obj = ModelGenerator.generateModel(config);
-		projectSpace.getProject().addModelElement(obj);
+		for (int i = 0; i < width; i++) {
+			EClass validClass = getValidEClass(projectSpace.getProject(), pckge, new ArrayList<EClass>());
+			ModelGeneratorConfiguration config = new ModelGeneratorConfiguration(pckge, validClass, width, depth);
+			EObject obj = ModelGenerator.generateModel(config);
+			projectSpace.getProject().addModelElement(obj);
+		}
 
 		// count num of projects
 		assertTrue(getConnectionManager().getProjectList(getSessionId()).size() == getProjectsOnServerBeforeTest());
@@ -99,7 +101,7 @@ public class ModelGeneratorTest extends ServerTests {
 			// no valid EClass left
 			return null;
 		}
-		Collections.shuffle(allEClasses);
+		Collections.shuffle(allEClasses, new Random(System.currentTimeMillis()));
 		return allEClasses.get(0);
 	}
 
@@ -143,4 +145,5 @@ public class ModelGeneratorTest extends ServerTests {
 		// e.printStackTrace();
 		// }
 	}
+
 }

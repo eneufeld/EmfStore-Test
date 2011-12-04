@@ -19,6 +19,7 @@ import org.eclipse.emf.ecp.common.commands.DeleteModelElementCommand;
 import org.eclipse.emf.ecp.common.model.ECPWorkspaceManager;
 import org.eclipse.emf.ecp.emfstorebridge.EMFStoreECPProject;
 import org.eclipse.emf.emfstore.client.model.ProjectSpace;
+import org.eclipse.emf.emfstore.common.model.Project;
 import org.eclipse.emf.emfstore.modelgenerator.common.ModelGeneratorUtil;
 
 /**
@@ -91,7 +92,15 @@ public final class ModelChanger {
 	public static void generateChanges(EObject rootObject, long seed, boolean ignoreAndLog, IProgressMonitor monitor) {
 		ModelChangerHelper.init(seed, ignoreAndLog);
 		monitor.beginTask("Changing process", ModelChangerHelper.getAmountOfWork());
-		Set<EObject> allChildren = ModelChangerHelper.getAllChildren(rootObject);
+		Set<EObject> allChildren=null;
+		if(rootObject instanceof Project){
+			allChildren=((Project)rootObject).getAllModelElements();
+		}
+		else{
+			
+			allChildren	= ModelChangerHelper.getAllChildren(rootObject);
+		}
+		 
 		deleteRandomEObjects(allChildren, monitor);
 		changeAttributesAndReferences(rootObject, monitor);
 	}
@@ -107,12 +116,13 @@ public final class ModelChanger {
 	 */
 	private static void deleteRandomEObjects(Set<EObject> allChildren,EObject parent) {
 		Set<EObject> deletedChildren = new LinkedHashSet<EObject>();
-		for(EObject eObject : parent.eContents()) {
+		for(EObject eObject : allChildren) {
+//			deleteRandomEObjects(ModelChangerHelper.getAllChildren(eObject), eObject);
 			// was the EObject already deleted?
 			if(deletedChildren.contains(eObject)) {
 				continue;
 			}
-			if(ModelChangerHelper.randomDelete()) {
+			if(ModelChangerHelper.randomDelete()&&!(eObject.eContainer() instanceof Project)) {//
 //				new DeleteModelElementCommand(eObject, new EMFStoreECPProject((ProjectSpace)parent.eContainer())).run();
 				// copy all children first to prevent concurrent modifications when deleting
 //				Set<EObject> contentCopy = new LinkedHashSet<EObject>(eObject.eContents());
