@@ -170,7 +170,7 @@ final class ModelChangerHelper {
 	 * be deleted or not
 	 */
 	protected static boolean randomDelete() {
-		return random.nextDouble() < 0.9;
+		return random.nextDouble() < 0.49;
 	}
 	
 	/**
